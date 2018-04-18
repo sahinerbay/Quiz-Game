@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './app.scss';
 import { getQuestion } from './../api'; 
-import {Question, MyAnswer, CompAnswer, Button, Result} from './../components/index';
+import {Question, MyAnswer, CompAnswer, Button, Result} from 'Components';
 import Aux from './../utils/aux_util';
 
 export class App extends Component {
