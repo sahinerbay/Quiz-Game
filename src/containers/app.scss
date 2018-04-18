@@ -1,0 +1,96 @@
+body {
+    font-size: 62.5%;
+    margin: 0 auto;
+}
+
+html, body, :global(#app) {
+    height: 100%;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+    padding: 10px 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 1px #525050;
+    box-shadow: inset 0 0 1px #525050;
+    background-color: white;
+}
+
+:global(#app) {
+    display: flex;
+    flex-direction: column;
+}
+
+:global(.top),
+:global(.bottom) {
+    background: #d8d8d8;
+    margin-top: 10px;
+    padding: 30px;
+    border: 1px solid #8e8e8e;
+    text-align: center;
+    height: 50%;
+}
+
+:global(.question-points), :global(.answer-result) {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+}
+
+:global(.question-question), :global(.answer-comp) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vh;
+}
+
+.button {
+    -webkit-box-shadow: inset 0px 1px 0px 0px #dedede;
+    box-shadow: inset 0px 1px 0px 0px #dedede;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #dbdbdb), to(#a3a0a3));
+    background: -webkit-linear-gradient(top, #dbdbdb 5%, #a3a0a3 100%);
+    background: -o-linear-gradient(top, #dbdbdb 5%, #a3a0a3 100%);
+    background: linear-gradient(to bottom, #dbdbdb 5%, #a3a0a3 100%);
+    background-color: #dbdbdb;
+    border-radius: 5px;
+    border: 1px solid #8c8c8c;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2vh;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #cfcdcd;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 40%;
+    margin: 20px auto 0 auto;
+    display: block;
+    color: #423737;
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        width: 80%;
+    }
+
+    textarea {
+        height: 130px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    body {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    body {
+        width: 40%;
+    }
+}
