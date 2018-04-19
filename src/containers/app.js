@@ -21,9 +21,10 @@ export class App extends Component {
   }
 
   handleKeyUp = (e) => {
+    e.persist();
     this.setState(prevState => ({
       ...prevState,
-      userAnswer: e
+      userAnswer: e.target.value
     }))
   }
 
@@ -49,6 +50,7 @@ export class App extends Component {
           query: response.question,
           answer: response.answer
         },
+        userAnswer: '',
         dataLoaded: true,
         isModalOn: false
       }))
@@ -64,7 +66,7 @@ export class App extends Component {
       <Aux>
         <div className="top">
           <Question query={this.state.question.query} value={this.state.question.value} />
-          <MyAnswer onKeyUp={this.handleKeyUp} />
+          <MyAnswer onKeyUp={this.handleKeyUp} value={this.state.userAnswer} />
           <Button onClick={this.compareAnswers}>
             Submit
           </Button>
